@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">4ba7aa7f9360b29005087efdfaba10a9</macroponent>
+        <name>calendar_1/events</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[function evaluateProperty({ api /*, helpers */ }) {
+  //quelle: LookupMultipleRecords-Res.
+  var list = (api && api.data && api.data.reservations_lmr && api.data.reservations_lmr.results) || [];
+  function toISO(s){ if(!s) return ''; s=String(s); return s.indexOf(' ')>-1 ? s.replace(' ','T') : s; }
+
+  var out = [];
+  for (var i = 0; i < list.length; i++) {
+    var r = list[i];
+
+    var title =
+      (r.number && r.number.value ? r.number.value : '') +
+      ((r.room && r.room.displayValue) ? (' — ' + r.room.displayValue) : '');
+
+    var start = toISO(r.planned_start && r.planned_start.value);
+    var end   = toISO(r.planned_end   && r.planned_end.value);
+
+    // sys_id bestimmen + record-URL bauen
+    var sysId = (r.sys_id && r.sys_id.value) ||
+                (r._row_data && r._row_data.uniqueValue) || '';
+
+    var recordUrl = '/now/record/table/x_1782765_nowroom_reservation/' + sysId;
+
+    //bisherigen out.push(...) ersetzen
+    out.push({
+      id: sysId,                 // wichtig für calender & Fallback
+      title: title,
+      start: start,
+      end: end,
+      extendedProps: {
+        sys_id: sysId,           // auch verfügbar
+        _recordUrl: recordUrl    // fertige Ziel-URL für den click
+      }
+    });
+  }
+  return out;
+}
+]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-19 17:31:34</sys_created_on>
+        <sys_id>101822bf9360b29005087efdfaba10cd</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>calendar_1/events</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ux_client_script_101822bf9360b29005087efdfaba10cd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-19 17:34:57</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+</record_update>

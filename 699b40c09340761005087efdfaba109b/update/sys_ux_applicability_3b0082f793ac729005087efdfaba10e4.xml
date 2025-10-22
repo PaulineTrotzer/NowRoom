@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_applicability">
+    <sys_ux_applicability action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <api_name>x_1782765_nowroom.NR Managers</api_name>
+        <description/>
+        <name>NR Managers</name>
+        <role_names/>
+        <roles>b77dd77993c0321005087efdfaba10b6,2d9b40c09340761005087efdfaba10bd</roles>
+        <sys_class_name>sys_ux_applicability</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-19 14:31:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3b0082f793ac729005087efdfaba10e4</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>NR Managers</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ux_applicability_3b0082f793ac729005087efdfaba10e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-20 11:15:40</sys_updated_on>
+    </sys_ux_applicability>
+</record_update>

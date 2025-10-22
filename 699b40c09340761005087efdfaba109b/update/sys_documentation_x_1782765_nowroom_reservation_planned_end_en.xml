@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="planned_end" label="Planned End" language="en" table="x_1782765_nowroom_reservation">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>planned_end</element>
+            <help/>
+            <hint/>
+            <label>Planned End</label>
+            <language>en</language>
+            <name>x_1782765_nowroom_reservation</name>
+            <plural>Planned Ends</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-09-15 16:57:14</sys_created_on>
+            <sys_id>c8eb9ff0930c7a1005087efdfaba1026</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_name>Planned End</sys_name>
+            <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+            <sys_update_name>sys_documentation_x_1782765_nowroom_reservation_planned_end_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-09-18 17:37:26</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

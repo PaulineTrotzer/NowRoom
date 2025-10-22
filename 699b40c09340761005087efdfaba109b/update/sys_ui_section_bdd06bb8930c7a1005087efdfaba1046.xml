@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Reservation Details" section_id="bdd06bb8930c7a1005087efdfaba1046" sys_domain="global" table="x_1782765_nowroom_reservation" version="3" view="">
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>true</is_plain_text>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>3a53265f9318fa1005087efdfaba1068</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <text>Assignment &amp; Tracking</text>
+            <type display_value="Section Separator">443e806c0fd30000b12e6903cfe01281</type>
+        </sys_ui_annotation>
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>true</is_plain_text>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>7653265f9318fa1005087efdfaba1069</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <text>Please describe any special requirements for room setup (e.g., table arrangement, extra chairs, buffet setup).</text>
+            <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
+        </sys_ui_annotation>
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>true</is_plain_text>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>b253265f9318fa1005087efdfaba1069</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <text>Special Requirements</text>
+            <type display_value="Section Separator">443e806c0fd30000b12e6903cfe01281</type>
+        </sys_ui_annotation>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>b653ae5f9318fa1005087efdfaba10a7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>room</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>7253ae5f9318fa1005087efdfaba10a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>reservation_status</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>f653ae5f9318fa1005087efdfaba10a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>planned_start</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>7e53ae5f9318fa1005087efdfaba10a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>planned_end</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>f253ae5f9318fa1005087efdfaba10a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>duration_pretty</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>7a53ae5f9318fa1005087efdfaba10a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>3a53265f9318fa1005087efdfaba1068</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>fe53ae5f9318fa1005087efdfaba10a9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assigned_to</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>7653ae5f9318fa1005087efdfaba10aa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>priority</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>fa53ae5f9318fa1005087efdfaba10aa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>opened_by</element>
+            <position>9</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>7253ae5f9318fa1005087efdfaba10ab</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>10</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>f653ae5f9318fa1005087efdfaba10ab</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>b253265f9318fa1005087efdfaba1069</element>
+            <position>11</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>7e53ae5f9318fa1005087efdfaba10ab</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>extra_equipment</element>
+            <position>12</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>f253ae5f9318fa1005087efdfaba10ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>setup_notes</element>
+            <position>13</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>7a53ae5f9318fa1005087efdfaba10ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>7653265f9318fa1005087efdfaba1069</element>
+            <position>14</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>fe53ae5f9318fa1005087efdfaba10ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>additional_comments</element>
+            <position>15</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-05 17:30:48</sys_created_on>
+            <sys_id>7653ae5f9318fa1005087efdfaba10ad</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Reservation Details" display_value="Reservation Details" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">bdd06bb8930c7a1005087efdfaba1046</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-05 17:30:48</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Reservation Details</caption>
+            <header>false</header>
+            <name>x_1782765_nowroom_reservation</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-09-15 17:18:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>bdd06bb8930c7a1005087efdfaba1046</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1782765_nowroom_reservation</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+            <sys_update_name>sys_ui_section_bdd06bb8930c7a1005087efdfaba1046</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-09-15 17:18:55</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

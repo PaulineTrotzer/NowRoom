@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_transform">
+    <sys_ux_data_broker_transform action="INSERT_OR_UPDATE">
+        <acl_failure_result/>
+        <api_name>x_1782765_nowroom.reservations_events_transform</api_name>
+        <batch_exclude>false</batch_exclude>
+        <description/>
+        <mutates_server_data>false</mutates_server_data>
+        <name>reservations_events_transform</name>
+        <output_schema>{&#13;
+  "type": "array",&#13;
+  "items": {&#13;
+    "type": "object",&#13;
+    "properties": {&#13;
+      "id":    { "type": "string" },&#13;
+      "title": { "type": "string" },&#13;
+      "start": { "type": "string" },&#13;
+      "end":   { "type": "string" }&#13;
+    },&#13;
+    "required": ["id","title","start","end"]&#13;
+  }&#13;
+}&#13;
+</output_schema>
+        <private>false</private>
+        <props/>
+        <required_translations>[ ]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <script><![CDATA[function evaluateProperty({ api }) {
+  const rows = api.data.reservations_rest?.result || [];   // Instanz-ID exakt!
+  return rows.map(r => ({
+    id: r.sys_id,
+    title: `${r.room_name?.display_value || 'Room'}${r.number ? ' (' + r.number + ')' : ''}`,
+    start: (r.planned_start || '').replace(' ', 'T'),
+    end:   (r.planned_end   || '').replace(' ', 'T')
+  }));
+}
+
+
+]]></script>
+        <sys_class_name>sys_ux_data_broker_transform</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-17 18:59:39</sys_created_on>
+        <sys_id>f91a289f93acbe5005087efdfaba1094</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>reservations_events_transform</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ux_data_broker_transform_f91a289f93acbe5005087efdfaba1094</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-17 19:29:15</sys_updated_on>
+    </sys_ux_data_broker_transform>
+    <sys_translated_text action="delete_multiple" query="documentkey=f91a289f93acbe5005087efdfaba1094"/>
+</record_update>

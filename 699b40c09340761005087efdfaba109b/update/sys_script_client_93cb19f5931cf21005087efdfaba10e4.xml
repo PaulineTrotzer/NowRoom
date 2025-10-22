@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>planned_start</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Validate planned_start vs today</name>
+        <order>300</order>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+  if (isLoading) return;
+
+  var FIELD = 'planned_start';
+  g_form.hideFieldMsg(FIELD, true);
+
+  var val = g_form.getValue(FIELD);
+  if (!val) return;
+
+  // browser fitting ---> date (local)
+  var parts = val.trim().split(' ');
+  var d = parts[0].split('-');           // YYYY-MM-DD
+  var t = (parts[1] || '00:00:00').split(':');  // HH:mm:ss
+  var start = new Date(+d[0], +d[1]-1, +d[2], +(t[0]||0), +(t[1]||0), +(t[2]||0));
+  var now   = new Date();
+
+  if (start.getTime() < now.getTime()) {
+    g_form.showFieldMsg(FIELD, 'Start date cannot be in the past.', 'error', true);
+    // optional:
+    // g_form.setValue(FIELD, oldValue);
+  }
+}
+
+
+
+]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-30 20:30:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>93cb19f5931cf21005087efdfaba10e4</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Validate planned_start vs today</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_script_client_93cb19f5931cf21005087efdfaba10e4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-30 22:29:25</sys_updated_on>
+        <table>x_1782765_nowroom_reservation</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

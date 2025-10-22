@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>Get Next Reservation</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	var TABLE = 'x_1782765_nowroom_reservation';
+	var START = 'planned_start';                  
+
+	var now = new GlideDateTime();            
+
+	var gr = new GlideRecord(TABLE);
+	gr.addQuery(START, '>=', now);                // statt gs.nowDateTime()
+	// gr.addQuery('state', '1');                 
+	gr.orderBy(START);                        
+	gr.setLimit(1);
+	gr.query();
+
+	var result = {};
+	if (gr.next()) {
+		result = {
+			sys_id: gr.getUniqueValue(),
+			start_time: gr.getDisplayValue(START),    // für UI
+			start_time_sys: gr.getValue(START),       // system value 
+			number: gr.getValue('number') || '',
+			name: gr.getDisplayValue('name') || ''
+		};
+	} else {
+		result = { message: 'No upcoming reservations found' };
+	}
+
+	return result;
+})(request, response);
+]]></operation_script>
+        <operation_uri>/api/x_1782765_nowroom/next_reservation_api/next</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/next</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 09:15:33</sys_created_on>
+        <sys_id>3f4e757593acf65005087efdfaba10ec</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Get Next Reservation</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ws_operation_3f4e757593acf65005087efdfaba10ec</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-14 09:33:07</sys_updated_on>
+        <web_service_definition display_value="Next Reservation API">89ecf5f193acf65005087efdfaba10f9</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>

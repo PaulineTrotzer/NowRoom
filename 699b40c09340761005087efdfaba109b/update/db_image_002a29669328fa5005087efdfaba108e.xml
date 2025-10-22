@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image/>
+        <name>upload_coarse-cement-surface-with-brush-strokes.jpg</name>
+        <size_bytes/>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-15 15:41:01</sys_created_on>
+        <sys_id>002a29669328fa5005087efdfaba108e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>upload_coarse-cement-surface-with-brush-strokes.jpg</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>db_image_002a29669328fa5005087efdfaba108e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-15 15:41:01</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+</record_update>

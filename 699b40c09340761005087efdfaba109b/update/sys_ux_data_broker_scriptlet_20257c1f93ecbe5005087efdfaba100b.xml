@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_scriptlet">
+    <sys_ux_data_broker_scriptlet action="INSERT_OR_UPDATE">
+        <api_name>x_1782765_nowroom.ui_events_scriptlet</api_name>
+        <batch_exclude>false</batch_exclude>
+        <description/>
+        <mutates_server_data>false</mutates_server_data>
+        <name>ui_events_scriptlet</name>
+        <output_schema>{&#13;
+  "type": "array",&#13;
+  "items": {&#13;
+    "type": "object",&#13;
+    "properties": {&#13;
+      "id":    { "type": "string" },&#13;
+      "title": { "type": "string" },&#13;
+      "start": { "type": "string" },&#13;
+      "end":   { "type": "string" }&#13;
+    },&#13;
+    "required": ["id","title","start","end"]&#13;
+  }&#13;
+}&#13;
+</output_schema>
+        <private>false</private>
+        <props/>
+        <required_translations>[ ]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <script><![CDATA[function handler() {
+  var items = [];
+  var gr = new GlideRecord('x_1782765_nowroom_ui_events');
+  gr.orderBy('start');
+  gr.query();
+  while (gr.next()) {
+    var s = gr.getValue('start');
+    var e = gr.getValue('end');
+    if (!s || !e) continue;
+    items.push({
+      id: gr.getUniqueValue(),
+      title: gr.getValue('title') || 'Event',
+      start: s.replace(' ', 'T'),
+      end:   e.replace(' ', 'T')
+    });
+  }
+  return { output: items };
+}
+]]></script>
+        <sys_class_name>sys_ux_data_broker_scriptlet</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-17 19:48:10</sys_created_on>
+        <sys_id>20257c1f93ecbe5005087efdfaba100b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>ui_events_scriptlet</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ux_data_broker_scriptlet_20257c1f93ecbe5005087efdfaba100b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-17 19:50:28</sys_updated_on>
+    </sys_ux_data_broker_scriptlet>
+    <sys_translated_text action="delete_multiple" query="documentkey=20257c1f93ecbe5005087efdfaba100b"/>
+</record_update>

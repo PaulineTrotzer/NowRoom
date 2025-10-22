@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-19 21:44:03</sys_created_on>
+        <sys_id>0993e3bf93a4b29005087efdfaba105f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1782765_nowroom_notice.x_1782765_nowroom.notice_user</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_security_acl display_value="x_1782765_nowroom_notice">cd93e3bf93a4b29005087efdfaba105a</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_0993e3bf93a4b29005087efdfaba105f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-19 21:44:03</sys_updated_on>
+        <sys_user_role display_value="x_1782765_nowroom.notice_user" name="x_1782765_nowroom.notice_user">e893637f93a4b29005087efdfaba1024</sys_user_role>
+    </sys_security_acl_role>
+</record_update>

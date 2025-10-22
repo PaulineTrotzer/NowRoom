@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_script">
+    <sys_ui_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <global>false</global>
+        <ignore_in_now_experience>false</ignore_in_now_experience>
+        <name>x_1782765_nowroom.reservation_utils</name>
+        <script><![CDATA[var ReservationUtils = (function() {
+
+  function plural(n, word){
+    return n + " " + (n === 1 ? word : word + "s");
+  }
+
+  function formatPretty(mins){
+    var DAY = 1440, HOUR = 60;
+    if (mins < DAY) {
+      var h = Math.floor(mins / HOUR), m = mins % HOUR;
+      if (h === 0) return plural(m, "minute");
+      if (m === 0) return plural(h, "hour");
+      return plural(h, "hour") + " " + plural(m, "minute");
+    } else {
+      var d = Math.floor(mins / DAY),
+          rest = mins % DAY,
+          h2 = Math.floor(rest / HOUR);
+      return h2 ? (plural(d,"day") + " " + plural(h2,"hour")) : plural(d,"day");
+    }
+  }
+
+  function recalc(g_form) {
+    var startStr = g_form.getValue('planned_start');
+    var endStr   = g_form.getValue('planned_end');
+
+    if (!startStr || !endStr) {
+      g_form.setValue('duration_pretty', "");
+      return;
+    }
+
+    var start = new Date(startStr.replace(" ", "T"));
+    var end   = new Date(endStr.replace(" ", "T"));
+    var diffMs = end - start;
+
+    if (isNaN(diffMs) || diffMs <= 0) {
+      g_form.setValue('duration_pretty', "");
+      return;
+    }
+
+    var mins = Math.round(diffMs / 60000);
+    g_form.setValue('duration_pretty', formatPretty(mins));
+  }
+
+  // --- Rückgabe für globalen Zugriff ---
+  return {
+    recalcDurationPretty: recalc
+  };
+
+})(); // 
+]]></script>
+        <script_name>reservation_utils</script_name>
+        <sys_class_name>sys_ui_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-16 18:29:46</sys_created_on>
+        <sys_id>9ac9fc1593c4fa1005087efdfaba107f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_1782765_nowroom.reservation_utils</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ui_script_9ac9fc1593c4fa1005087efdfaba107f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-16 18:30:14</sys_updated_on>
+        <ui_type>10</ui_type>
+        <use_scoped_format>false</use_scoped_format>
+    </sys_ui_script>
+</record_update>

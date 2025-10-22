@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>room</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-06 12:47:56</sys_created_on>
+        <sys_id>7d2c2eab935c3e1005087efdfaba1078</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>room</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ui_policy_action_7d2c2eab935c3e1005087efdfaba1078</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-06 12:47:56</sys_updated_on>
+        <table>x_1782765_nowroom_reservation</table>
+        <ui_policy display_value="Lock room when status = requested">8b0c2e27935c3e1005087efdfaba1006</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=7d2c2eab935c3e1005087efdfaba1078"/>
+</record_update>

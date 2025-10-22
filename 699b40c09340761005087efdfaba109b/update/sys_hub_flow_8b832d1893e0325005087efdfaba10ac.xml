@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=104000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Flow that is triggered when users withdraw their reservation request.</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>reservation__cancellation_flow</internal_name>
+        <label_cache>[{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Reservation Record","reference":"x_1782765_nowroom_reservation","reference_display":"Reservation","type":"reference","base_type":"reference","usedInstances":{"969013ff-9781-449e-9159-df93357ade81":["record"]},"attributes":{}}]</label_cache>
+        <master_snapshot>68f3655893e0325005087efdfaba1030</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Reservation - Cancellation Flow</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>34f3655893e0325005087efdfaba1070</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:25:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8b832d1893e0325005087efdfaba10ac</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Reservation - Cancellation Flow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_hub_flow_8b832d1893e0325005087efdfaba10ac</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:42</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=8b832d1893e0325005087efdfaba10ac"/>
+    <sys_variable_value action="delete_multiple" query="document_key=8b832d1893e0325005087efdfaba10ac"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_1782765_nowroom_reservation">reservation_status=cancelled<item display_value="Cancelled" endquery="false" field="reservation_status" goto="false" newquery="false" operator="=" or="false" value="cancelled"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>34f3655893e0325005087efdfaba1070</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:42</sys_updated_on>
+        <table>x_1782765_nowroom_reservation</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>8b832d1893e0325005087efdfaba10ac</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:42</sys_created_on>
+        <sys_id>fcf3655893e0325005087efdfaba1070</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:42</sys_updated_on>
+        <trigger display_value="">34f3655893e0325005087efdfaba1070</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=8b832d1893e0325005087efdfaba10ac^sys_idNOT INfcf3655893e0325005087efdfaba1070"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=8b832d1893e0325005087efdfaba10ac"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=8b832d1893e0325005087efdfaba10ac^sys_idNOT IN07832d1893e0325005087efdfaba10ad"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>8b832d1893e0325005087efdfaba10ac</id>
+        <name>Reservation - Cancellation Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:25:57</sys_created_on>
+        <sys_id>07832d1893e0325005087efdfaba10ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:25:57</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=07832d1893e0325005087efdfaba10ad"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=8b832d1893e0325005087efdfaba10ac^sys_idNOT IN73e3ed1893e0325005087efdfaba10d3,a3e3ed1893e0325005087efdfaba10d0,e3e3ed1893e0325005087efdfaba10cc"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Reservation - Cancellation Flow">8b832d1893e0325005087efdfaba10ac</model>
+        <model_id>8b832d1893e0325005087efdfaba10ac</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8b832d1893e0325005087efdfaba10ac</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:38</sys_created_on>
+        <sys_id>73e3ed1893e0325005087efdfaba10d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=73e3ed1893e0325005087efdfaba10d3"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Reservation - Cancellation Flow">8b832d1893e0325005087efdfaba10ac</model>
+        <model_id>8b832d1893e0325005087efdfaba10ac</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8b832d1893e0325005087efdfaba10ac</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:38</sys_created_on>
+        <sys_id>a3e3ed1893e0325005087efdfaba10d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:38</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a3e3ed1893e0325005087efdfaba10d0"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Reservation - Cancellation Flow">8b832d1893e0325005087efdfaba10ac</model>
+        <model_id>8b832d1893e0325005087efdfaba10ac</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8b832d1893e0325005087efdfaba10ac</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:37</sys_created_on>
+        <sys_id>e3e3ed1893e0325005087efdfaba10cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e3e3ed1893e0325005087efdfaba10cc"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=8b832d1893e0325005087efdfaba10ac"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8b832d1893e0325005087efdfaba10ac"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=8b832d1893e0325005087efdfaba10ac^sys_idNOT IN7be3255893e0325005087efdfaba10a6"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Reservation - Cancellation Flow">8b832d1893e0325005087efdfaba10ac</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:38</sys_created_on>
+        <sys_id>7be3255893e0325005087efdfaba10a6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:41</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=8b832d1893e0325005087efdfaba10ac^sys_idNOT IN77e3255893e0325005087efdfaba10a8"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Fire Event">80a30edeff30311077a95dac793bf19b</action_type>
+        <action_type_parent display_value="Fire Event">15e10e5eff30311077a95dac793bf11e</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>80a30edeff30311077a95dac793bf19b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Reservation - Cancellation Flow">8b832d1893e0325005087efdfaba10ac</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:38</sys_created_on>
+        <sys_id>77e3255893e0325005087efdfaba10a8</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:36:20</sys_updated_on>
+        <ui_id>969013ff-9781-449e-9159-df93357ade81</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2W227bOBCGX0XQtWVIFHXyXRE3iwLddpG0vSkKgyKHMRfUoRTlxBvk3Zc62JbstRMXboCiexNEwyH185/5PPr6aAtmz+yYEt8FBpz7ru95bhSRJGCERomfci8Be2LnJAOTCSvI9aJ9mNgrIus2GIDvxyxOfKAcPNcN3DgCzjhJiedS16QyUZWSrL/0Ox4WXhSjKAwWeXGviiKbKqhArYgWRe5QklOQEpjZSJdCMgW5Pfv6bWKXRJlXa1D27HFv6aUXkSQFaVLfNjc5cjG9LpuYAg7mfLoJve+33gzihWKNGm9iw4OGnBnRM05kBRM7IzkjulBre6ZVbQIKCPuYy/U2YymMhJk9h0ooYNbtutKQWa0ySy+JtqplUUtmpWDxJsNuDn2oxD9GnY8mA4Ezu1pX3R0U3ImqsWiwvuj939zbummTVOu3SeRzosmtUUl1rZrTWucLQaHq3DWWklrqq2GsS/hYtme0WzRJ5TEttJB1ln/o3La3J246wkTqyuiEsjGxsaX3iN8ui/ut49cib/3uF2VBiRykAlF0eS1Asv2SEq2VSGvdiH+0a/HpsMRd8L+KDBKy5qyMlKXI7xalKlai1WGulU3vpHmYclncG/2VuMunhDamTE35yfTaxOdt+AtRonHoT3NM60ktPufiew3vWrng+sAi7kQEYwfjIHXSFPsOdYMkIS5C3EP206Qx90qSqtpZaS6x+F43RnTG9hYuurI0W6gSpX5jRK2gd+tp0rNP3VPIELxDRAE13T7g/vHxyrS0Np1bKOtzyZp/F96U1soYp5+eDrk/G+gXqJPbgvXy9uX2NLOC1m0VBdvjed6vWO/mO6LRJYj+o+mMTphVpH8D1RZXRWbgBgs6zFtkTnB9BOPLQ/sjjHYunIHoEQzHtRmDOK7Oq6DIPUoCD/kO8iPq4ITGTozB/DFAIpzEFNHwB1DsnH6Ox5MjjES7Bt+0zurYUF0MhuohizejxTOxfF7kBstPvco90T2U7eNw7L4fbrM+dAs9kv5pJPvIjsmuO7dkxe4vRNb50+8IWiOHx2SNPH4VsBKEMQ/j2EkRYQ6OQ2xmnBs7kYddZPoJ+YH/E2Yci0+2a7prT9P4mTdg6gIj7AUv37Dy1+YoyzuU1BNjvtpMefZoud0Ee1LwmaSMp9ebfG21BnQfoeZXpJArqCxdWMTavn/AlftbkrV1YkzVthavQlQYuInrIu6wMAYHexw5xEtiByE/9VhIMQqTn0EUPtnUfNy+6MJEPf/yQ6LQoaRziAr+J+o3IYrjEPs0ihxsesx8/MVmRkUQOH7AeIRZRMPYuyBR3/4F1xPx84URAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=77e3255893e0325005087efdfaba10a8"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=8b832d1893e0325005087efdfaba10ac"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=8b832d1893e0325005087efdfaba10ac"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=8b832d1893e0325005087efdfaba10ac"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=8b832d1893e0325005087efdfaba10ac"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8b832d1893e0325005087efdfaba10ac</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:37</sys_created_on>
+        <sys_id>a3e3ed1893e0325005087efdfaba10cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8b832d1893e0325005087efdfaba10ac</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:38</sys_created_on>
+        <sys_id>b7e3ed1893e0325005087efdfaba10d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8b832d1893e0325005087efdfaba10ac</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:38</sys_created_on>
+        <sys_id>f7e3255893e0325005087efdfaba108b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:38</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_8b832d1893e0325005087efdfaba10ac"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_8b832d1893e0325005087efdfaba10ac"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Flow that is triggered when users withdraw their reservation request.</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>reservation__cancellation_flow</internal_name>
+        <label_cache>[{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Reservation Record","reference":"x_1782765_nowroom_reservation","reference_display":"Reservation","type":"reference","base_type":"reference","usedInstances":{"969013ff-9781-449e-9159-df93357ade81":["record"]},"attributes":{}}]</label_cache>
+        <master>true</master>
+        <name>Reservation - Cancellation Flow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Reservation - Cancellation Flow">8b832d1893e0325005087efdfaba10ac</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>68f3655893e0325005087efdfaba1030</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:42</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=68f3655893e0325005087efdfaba1030"/>
+    <sys_variable_value action="delete_multiple" query="document_key=68f3655893e0325005087efdfaba1030"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=68f3655893e0325005087efdfaba1030"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=68f3655893e0325005087efdfaba1030^sys_idNOT IN24f3655893e0325005087efdfaba1031"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>68f3655893e0325005087efdfaba1030</id>
+        <name>Reservation - Cancellation Flow</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:42</sys_created_on>
+        <sys_id>24f3655893e0325005087efdfaba1031</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:42</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=24f3655893e0325005087efdfaba1031"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=68f3655893e0325005087efdfaba1030^sys_idNOT IN30f3655893e0325005087efdfaba1049,78f3655893e0325005087efdfaba104f,e0f3655893e0325005087efdfaba1032"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Reservation - Cancellation Flow">68f3655893e0325005087efdfaba1030</model>
+        <model_id>68f3655893e0325005087efdfaba1030</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_68f3655893e0325005087efdfaba1030</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:42</sys_created_on>
+        <sys_id>30f3655893e0325005087efdfaba1049</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=30f3655893e0325005087efdfaba1049"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Reservation - Cancellation Flow">68f3655893e0325005087efdfaba1030</model>
+        <model_id>68f3655893e0325005087efdfaba1030</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_68f3655893e0325005087efdfaba1030</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:42</sys_created_on>
+        <sys_id>78f3655893e0325005087efdfaba104f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=78f3655893e0325005087efdfaba104f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Reservation - Cancellation Flow">68f3655893e0325005087efdfaba1030</model>
+        <model_id>68f3655893e0325005087efdfaba1030</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_68f3655893e0325005087efdfaba1030</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:42</sys_created_on>
+        <sys_id>e0f3655893e0325005087efdfaba1032</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e0f3655893e0325005087efdfaba1032"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=68f3655893e0325005087efdfaba1030"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=68f3655893e0325005087efdfaba1030"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=68f3655893e0325005087efdfaba1030^sys_idNOT IN3cf3655893e0325005087efdfaba1068"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Reservation - Cancellation Flow">68f3655893e0325005087efdfaba1030</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:42</sys_created_on>
+        <sys_id>3cf3655893e0325005087efdfaba1068</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:42</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=68f3655893e0325005087efdfaba1030^sys_idNOT INf0f3655893e0325005087efdfaba1067"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Fire Event">80a30edeff30311077a95dac793bf19b</action_type>
+        <action_type_parent display_value="Fire Event">15e10e5eff30311077a95dac793bf11e</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>80a30edeff30311077a95dac793bf19b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Reservation - Cancellation Flow">68f3655893e0325005087efdfaba1030</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:42</sys_created_on>
+        <sys_id>f0f3655893e0325005087efdfaba1067</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:42</sys_updated_on>
+        <ui_id>969013ff-9781-449e-9159-df93357ade81</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2W227bOBCGX0XQtWVIFHXyXRE3iwLddpG0vSkKgyKHMRfUoRTlxBvk3Zc62JbstRMXboCiexNEwyH185/5PPr6aAtmz+yYEt8FBpz7ru95bhSRJGCERomfci8Be2LnJAOTCSvI9aJ9mNgrIus2GIDvxyxOfKAcPNcN3DgCzjhJiedS16QyUZWSrL/0Ox4WXhSjKAwWeXGviiKbKqhArYgWRe5QklOQEpjZSJdCMgW5Pfv6bWKXRJlXa1D27HFv6aUXkSQFaVLfNjc5cjG9LpuYAg7mfLoJve+33gzihWKNGm9iw4OGnBnRM05kBRM7IzkjulBre6ZVbQIKCPuYy/U2YymMhJk9h0ooYNbtutKQWa0ySy+JtqplUUtmpWDxJsNuDn2oxD9GnY8mA4Ezu1pX3R0U3ImqsWiwvuj939zbummTVOu3SeRzosmtUUl1rZrTWucLQaHq3DWWklrqq2GsS/hYtme0WzRJ5TEttJB1ln/o3La3J246wkTqyuiEsjGxsaX3iN8ui/ut49cib/3uF2VBiRykAlF0eS1Asv2SEq2VSGvdiH+0a/HpsMRd8L+KDBKy5qyMlKXI7xalKlai1WGulU3vpHmYclncG/2VuMunhDamTE35yfTaxOdt+AtRonHoT3NM60ktPufiew3vWrng+sAi7kQEYwfjIHXSFPsOdYMkIS5C3EP206Qx90qSqtpZaS6x+F43RnTG9hYuurI0W6gSpX5jRK2gd+tp0rNP3VPIELxDRAE13T7g/vHxyrS0Np1bKOtzyZp/F96U1soYp5+eDrk/G+gXqJPbgvXy9uX2NLOC1m0VBdvjed6vWO/mO6LRJYj+o+mMTphVpH8D1RZXRWbgBgs6zFtkTnB9BOPLQ/sjjHYunIHoEQzHtRmDOK7Oq6DIPUoCD/kO8iPq4ITGTozB/DFAIpzEFNHwB1DsnH6Ox5MjjES7Bt+0zurYUF0MhuohizejxTOxfF7kBstPvco90T2U7eNw7L4fbrM+dAs9kv5pJPvIjsmuO7dkxe4vRNb50+8IWiOHx2SNPH4VsBKEMQ/j2EkRYQ6OQ2xmnBs7kYddZPoJ+YH/E2Yci0+2a7prT9P4mTdg6gIj7AUv37Dy1+YoyzuU1BNjvtpMefZoud0Ee1LwmaSMp9ebfG21BnQfoeZXpJArqCxdWMTavn/AlftbkrV1YkzVthavQlQYuInrIu6wMAYHexw5xEtiByE/9VhIMQqTn0EUPtnUfNy+6MJEPf/yQ6LQoaRziAr+J+o3IYrjEPs0ihxsesx8/MVmRkUQOH7AeIRZRMPYuyBR3/4F1xPx84URAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f0f3655893e0325005087efdfaba1067"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=68f3655893e0325005087efdfaba1030"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=68f3655893e0325005087efdfaba1030"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=68f3655893e0325005087efdfaba1030"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=68f3655893e0325005087efdfaba1030"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_68f3655893e0325005087efdfaba1030</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:42</sys_created_on>
+        <sys_id>34f3655893e0325005087efdfaba104d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_68f3655893e0325005087efdfaba1030</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:42</sys_created_on>
+        <sys_id>70f3655893e0325005087efdfaba1060</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_68f3655893e0325005087efdfaba1030</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:42</sys_created_on>
+        <sys_id>f8f3655893e0325005087efdfaba1046</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:42</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_68f3655893e0325005087efdfaba1030"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_68f3655893e0325005087efdfaba1030"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>8b832d1893e0325005087efdfaba10ac</sys_id>
+        <latest_snapshot>68f3655893e0325005087efdfaba1030</latest_snapshot>
+        <compiler_build>glide-yokohama-12-18-2024__patch6-07-17-2025_07-27-2025_1301.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=8b832d1893e0325005087efdfaba10ac^sys_idNOT IN38f3655893e0325005087efdfaba1071"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"38f3655893e0325005087efdfaba1071","name":"plan","plan_signature":null}}</plan>
+        <plan_id>8b832d1893e0325005087efdfaba10ac</plan_id>
+        <snapshot>dfe5edd893e0325005087efdfaba1083</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:27:42</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>38f3655893e0325005087efdfaba1071</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:27:42</sys_updated_on>
+        <trigger display_value="">34f3655893e0325005087efdfaba1070</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=8b832d1893e0325005087efdfaba10ac"/>
+</record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_data_broker_scriptlet">
+    <sys_ux_data_broker_scriptlet action="INSERT_OR_UPDATE">
+        <api_name>x_1782765_nowroom.reservations_scriptlet</api_name>
+        <batch_exclude>false</batch_exclude>
+        <description>getting all upcoming reservations</description>
+        <mutates_server_data>false</mutates_server_data>
+        <name>reservations_scriptlet</name>
+        <output_schema>{&#13;
+  "type": "array",&#13;
+  "items": {&#13;
+    "type": "object",&#13;
+    "properties": {&#13;
+      "id":    { "type": "string" },&#13;
+      "title": { "type": "string" },&#13;
+      "start": { "type": "string" },&#13;
+      "end":   { "type": "string" }&#13;
+    },&#13;
+    "required": ["id", "title", "start", "end"]&#13;
+  }&#13;
+}&#13;
+</output_schema>
+        <private>false</private>
+        <props/>
+        <required_translations>[ ]</required_translations>
+        <schema_version>1.0.0</schema_version>
+        <script><![CDATA[function handler() {
+  var items = [];
+  var gr = new GlideRecord('sys_user');
+  gr.orderBy('sys_created_on');
+  gr.setLimit(20);
+  gr.query();
+  while (gr.next()) {
+    var s = gr.getValue('sys_created_on');
+    var e = gr.getValue('sys_updated_on') || s;
+    items.push({
+      id: gr.getUniqueValue(),
+      title: 'User: ' + gr.getDisplayValue('name'),
+      start: (s || '2025-11-01 10:00:00').replace(' ', 'T'),
+      end:   (e || '2025-11-01 10:30:00').replace(' ', 'T')
+    });
+  }
+  if (!items.length) {
+    items.push({ id:'u0', title:'no sys_user (unexpected)', start:'2025-11-01T10:00:00', end:'2025-11-01T10:30:00' });
+  }
+  return { output: items };
+}
+
+]]></script>
+        <sys_class_name>sys_ux_data_broker_scriptlet</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-17 16:47:40</sys_created_on>
+        <sys_id>7c0c4897932cbe5005087efdfaba107d</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>reservations_scriptlet</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ux_data_broker_scriptlet_7c0c4897932cbe5005087efdfaba107d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-17 18:44:38</sys_updated_on>
+    </sys_ux_data_broker_scriptlet>
+    <sys_translated_text action="delete_multiple" query="documentkey=7c0c4897932cbe5005087efdfaba107d"/>
+</record_update>

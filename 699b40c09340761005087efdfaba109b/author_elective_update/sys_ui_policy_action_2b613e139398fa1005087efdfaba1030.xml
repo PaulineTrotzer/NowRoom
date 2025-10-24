@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>planned_start</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-05 18:32:51</sys_created_on>
+        <sys_id>2b613e139398fa1005087efdfaba1030</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>planned_start</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ui_policy_action_2b613e139398fa1005087efdfaba1030</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-05 18:32:51</sys_updated_on>
+        <table>x_1782765_nowroom_reservation</table>
+        <ui_policy display_value="Lock field when status = requested">bf0136139398fa1005087efdfaba1041</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=2b613e139398fa1005087efdfaba1030"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NowRoom">699b40c09340761005087efdfaba109b</application>
+        <file_path/>
+        <instance_id>604bb1013b3da61016e44a8aa4e45ae4</instance_id>
+        <instance_name>dev349927</instance_name>
+        <name>sys_ui_policy_action_2b613e139398fa1005087efdfaba1030</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>true</disabled><field>planned_start</field><field_message/><field_message_type>none</field_message_type><mandatory>ignore</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-05 18:32:51</sys_created_on><sys_id>2b613e139398fa1005087efdfaba1030</sys_id><sys_mod_count>0</sys_mod_count><sys_name>planned_start</sys_name><sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package><sys_policy/><sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope><sys_update_name>sys_ui_policy_action_2b613e139398fa1005087efdfaba1030</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-05 18:32:51</sys_updated_on><table>x_1782765_nowroom_reservation</table><ui_policy display_value="Lock field when status = requested">bf0136139398fa1005087efdfaba1041</ui_policy><value/><value_action>ignore</value_action><visible>true</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=2b613e139398fa1005087efdfaba1030"/></record_update>]]></payload>
+        <payload_hash>924390108</payload_hash>
+        <record_name>planned_start</record_name>
+        <reverted_from/>
+        <source>259b40c09340761005087efdfaba10a0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-05 18:32:51</sys_created_on>
+        <sys_id>e381ba9f9358fa1005087efdfaba1010</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>199b5a5e2170000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-05 18:32:51</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>e781ba9ff358fa106fba413531e70e0f</update_guid>
+        <update_guid_history>e781ba9ff358fa106fba413531e70e0f:924390108</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-05 18:43:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>16b001a679d445d088ce83e6f1822279</sys_id>
+        <sys_metadata>2b613e139398fa1005087efdfaba1030</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>planned_start</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_scope_delete display_value="">881a488c25c449949be0a03b4ec57f19</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_2b613e139398fa1005087efdfaba1030</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_2b613e139398fa1005087efdfaba1030">e381ba9f9358fa1005087efdfaba1010</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-05 18:43:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

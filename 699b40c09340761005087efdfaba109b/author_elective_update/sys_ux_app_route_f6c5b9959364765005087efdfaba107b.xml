@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="Room Booking Space">bf68b96093e4725005087efdfaba1077</app_config>
+        <description/>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <name>Reservations</name>
+        <optional_parameters>listId</optional_parameters>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>reservations</route_type>
+        <screen_type display_value="Reservations">bec5b9959364765005087efdfaba1078</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-11 19:19:35</sys_created_on>
+        <sys_id>f6c5b9959364765005087efdfaba107b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reservations</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ux_app_route_f6c5b9959364765005087efdfaba107b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-11 19:19:35</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=f6c5b9959364765005087efdfaba107b"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NowRoom">699b40c09340761005087efdfaba109b</application>
+        <file_path/>
+        <instance_id>604bb1013b3da61016e44a8aa4e45ae4</instance_id>
+        <instance_name>dev349927</instance_name>
+        <name>sys_ux_app_route_f6c5b9959364765005087efdfaba107b</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config display_value="Room Booking Space">bf68b96093e4725005087efdfaba1077</app_config><description/><extension_point/><fields/><icon/><name>Reservations</name><optional_parameters>listId</optional_parameters><order>0</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><parent_macroponent_composition_element_id/><route_type>reservations</route_type><screen_type display_value="Reservations">bec5b9959364765005087efdfaba1078</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-11 19:19:35</sys_created_on><sys_id>f6c5b9959364765005087efdfaba107b</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Reservations</sys_name><sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package><sys_policy/><sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope><sys_update_name>sys_ux_app_route_f6c5b9959364765005087efdfaba107b</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-11 19:19:35</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=f6c5b9959364765005087efdfaba107b"/></record_update>]]></payload>
+        <payload_hash>365308590</payload_hash>
+        <record_name>Reservations</record_name>
+        <reverted_from/>
+        <source>259b40c09340761005087efdfaba10a0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-11 19:19:35</sys_created_on>
+        <sys_id>3ac5bd959364765005087efdfaba1022</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>199d4b6d3d80000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-11 19:19:35</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>fec5b99505647650233a268867a4537c</update_guid>
+        <update_guid_history>fec5b99505647650233a268867a4537c:365308590</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-11 19:41:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>ef500fba536041c09ccba605c6e44be4</sys_id>
+        <sys_metadata>f6c5b9959364765005087efdfaba107b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reservations</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_scope_delete display_value="">881a488c25c449949be0a03b4ec57f19</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_f6c5b9959364765005087efdfaba107b</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_f6c5b9959364765005087efdfaba107b">3ac5bd959364765005087efdfaba1022</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-11 19:41:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

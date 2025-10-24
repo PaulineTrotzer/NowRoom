@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="c7bae96893ccf61005087efdfaba101b" extends="task" label="Reservation" max_length="40" name="x_1782765_nowroom_reservation" type="collection">
+        <element label="Parent_reservation" max_length="32" name="parent_reservation" reference="x_1782765_nowroom_reservation" type="reference"/>
+        <element label="Additional Notes" max_length="500" name="additional_comments" type="string"/>
+        <element label="Planned End" mandatory="true" max_length="40" name="planned_end" type="glide_date_time"/>
+        <element choice="1" label="Reservation Status" max_length="40" name="reservation_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="requested"/>
+                <element inactive_on_update="false" label="Cancelled" sequence="3" value="cancelled"/>
+            </choice>
+        </element>
+        <element label="Planned Start" mandatory="true" max_length="40" name="planned_start" type="glide_date_time"/>
+        <element attributes="encode_utf8=false" label="Room" mandatory="true" max_length="32" name="room" reference="x_1782765_nowroom_meeting_room" reference_qual="status=active^EQ" reference_qual_condition="status=active^EQ" type="reference"/>
+        <element label="Room Setup" max_length="500" name="setup_notes" type="string"/>
+        <element label="Duration (Minutes)" max_length="40" name="duration_minutes" read_only="true" type="integer"/>
+        <element choice="1" label="Extra Equipment" max_length="40" name="extra_equipment" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Microphone/Speakers" sequence="500" value="Microphone/Speakers"/>
+                <element inactive_on_update="false" label="Screen/Monitor" sequence="200" value="Screen/Monitor"/>
+                <element inactive_on_update="false" label="Laptop/Notebook" sequence="600" value="Laptop/Notebook"/>
+                <element inactive_on_update="false" label="Beamer/Projector" sequence="100" value="Beamer / Projector"/>
+                <element inactive_on_update="false" label="Whiteboard" sequence="300" value="Whiteboard"/>
+                <element inactive_on_update="false" label="Other" sequence="800" value="Other"/>
+                <element inactive_on_update="false" label="Flipchart" sequence="400" value="Flipchart"/>
+                <element inactive_on_update="false" label="LED PAR can" sequence="600" value="LED PAR can"/>
+            </choice>
+        </element>
+        <element label="Reservation Duration" max_length="100" name="duration_pretty" read_only="true" type="string"/>
+    </element>
+</database>

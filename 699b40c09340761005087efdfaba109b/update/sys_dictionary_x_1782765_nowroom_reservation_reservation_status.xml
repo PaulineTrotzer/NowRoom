@@ -52,7 +52,6 @@
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-09-15 17:12:48</sys_created_on>
-        <sys_id>74eb5b70930c7a1005087efdfaba1082</sys_id>
         <sys_name>Reservation Status</sys_name>
         <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
         <sys_policy/>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">cbd0063b93ac729005087efdfaba10e7</macroponent>
+        <name>calendar_1/events</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[function evaluateProperty({ api /*, helpers */ }) {
+  // Quelle: deine LookupMultipleRecords-Resource
+  var list = (api && api.data && api.data.reservations_lmr && api.data.reservations_lmr.results) || [];
+
+  function toISO(s){ if(!s) return ''; s=String(s); return s.indexOf(' ')>-1 ? s.replace(' ','T') : s; }
+
+  var out = [];
+  for (var i = 0; i < list.length; i++) {
+    var r = list[i];
+
+    var title =
+      (r.number && r.number.value ? r.number.value : '') +
+      ((r.room && r.room.displayValue) ? (' — ' + r.room.displayValue) : '');
+
+    var start = toISO(r.planned_start && r.planned_start.value);
+    var end   = toISO(r.planned_end   && r.planned_end.value);
+
+    // ⬇️ HIER: sys_id sicher bestimmen + Record-URL bauen
+    var sysId = (r.sys_id && r.sys_id.value) ||
+                (r._row_data && r._row_data.uniqueValue) || '';
+
+    var recordUrl = '/now/record/table/x_1782765_nowroom_reservation/' + sysId;
+
+    // ⬇️ Und hier den bisherigen out.push(...) ersetzen
+    out.push({
+      id: sysId,                 // wichtig für den Kalender & Fallback
+      title: title,
+      start: start,
+      end: end,
+      extendedProps: {
+        sys_id: sysId,           // zusätzlich verfügbar
+        _recordUrl: recordUrl    // fertige Ziel-URL für den Klick
+      }
+    });
+  }
+  return out;
+}
+]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-19 14:32:45</sys_created_on>
+        <sys_id>8bd0063b93ac729005087efdfaba10eb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>calendar_1/events</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ux_client_script_8bd0063b93ac729005087efdfaba10eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-19 14:32:45</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NowRoom">699b40c09340761005087efdfaba109b</application>
+        <file_path/>
+        <instance_id>604bb1013b3da61016e44a8aa4e45ae4</instance_id>
+        <instance_name>dev349927</instance_name>
+        <name>sys_ux_client_script_8bd0063b93ac729005087efdfaba10eb</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Default"&gt;cbd0063b93ac729005087efdfaba10e7&lt;/macroponent&gt;&lt;name&gt;calendar_1/events&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[function evaluateProperty({ api /*, helpers */ }) {
+  // Quelle: deine LookupMultipleRecords-Resource
+  var list = (api &amp;&amp; api.data &amp;&amp; api.data.reservations_lmr &amp;&amp; api.data.reservations_lmr.results) || [];
+
+  function toISO(s){ if(!s) return ''; s=String(s); return s.indexOf(' ')&gt;-1 ? s.replace(' ','T') : s; }
+
+  var out = [];
+  for (var i = 0; i &lt; list.length; i++) {
+    var r = list[i];
+
+    var title =
+      (r.number &amp;&amp; r.number.value ? r.number.value : '') +
+      ((r.room &amp;&amp; r.room.displayValue) ? (' — ' + r.room.displayValue) : '');
+
+    var start = toISO(r.planned_start &amp;&amp; r.planned_start.value);
+    var end   = toISO(r.planned_end   &amp;&amp; r.planned_end.value);
+
+    // ⬇️ HIER: sys_id sicher bestimmen + Record-URL bauen
+    var sysId = (r.sys_id &amp;&amp; r.sys_id.value) ||
+                (r._row_data &amp;&amp; r._row_data.uniqueValue) || '';
+
+    var recordUrl = '/now/record/table/x_1782765_nowroom_reservation/' + sysId;
+
+    // ⬇️ Und hier den bisherigen out.push(...) ersetzen
+    out.push({
+      id: sysId,                 // wichtig für den Kalender &amp; Fallback
+      title: title,
+      start: start,
+      end: end,
+      extendedProps: {
+        sys_id: sysId,           // zusätzlich verfügbar
+        _recordUrl: recordUrl    // fertige Ziel-URL für den Klick
+      }
+    });
+  }
+  return out;
+}
+]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-10-19 14:32:45&lt;/sys_created_on&gt;&lt;sys_id&gt;8bd0063b93ac729005087efdfaba10eb&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;calendar_1/events&lt;/sys_name&gt;&lt;sys_package display_value="NowRoom" source="x_1782765_nowroom"&gt;699b40c09340761005087efdfaba109b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NowRoom"&gt;699b40c09340761005087efdfaba109b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_8bd0063b93ac729005087efdfaba10eb&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-10-19 14:32:45&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;transform&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1653814825</payload_hash>
+        <record_name>calendar_1/events</record_name>
+        <reverted_from/>
+        <source>259b40c09340761005087efdfaba10a0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-19 14:32:45</sys_created_on>
+        <sys_id>c7d0063b93ac729005087efdfaba10ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>199fce318980000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-19 14:32:45</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>8bd0063b79ac7290cde489897c07f6ee</update_guid>
+        <update_guid_history>8bd0063b79ac7290cde489897c07f6ee:1653814825</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-19 16:48:35</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>ae860a4dda754f6cb9d5cb4f777c2b84</sys_id>
+        <sys_metadata>8bd0063b93ac729005087efdfaba10eb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>calendar_1/events</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_scope_delete display_value="">881a488c25c449949be0a03b4ec57f19</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_8bd0063b93ac729005087efdfaba10eb</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_8bd0063b93ac729005087efdfaba10eb">c7d0063b93ac729005087efdfaba10ef</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-19 16:48:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>true</direct>
+        <endpoint>x_1782765_nowroom_nowroom_confirm_cancel.do</endpoint>
+        <html><![CDATA[<div style="padding:16px;max-width:520px">
+  <h2 style="margin:0 0 8px;">Cancel reservation?</h2>
+  <p style="margin:0 0 16px;">Do you really want to cancel this reservation?</p>
+
+  <div style="display:flex;gap:8px;justify-content:flex-end">
+    <!-- Cancel -->
+    <button type="button" class="btn btn-default"
+      onclick="
+        try {
+          if (typeof GlideDialogWindow !== 'undefined') {
+            var d = (GlideDialogWindow.get) ? GlideDialogWindow.get() : null;
+            if (d) { d.destroy(); }
+          }
+        } catch(e) {}
+        try {
+          if (typeof GlideModal !== 'undefined') {
+            var m = (GlideModal.get) ? GlideModal.get() : null;
+            if (m) { m.destroy(); }
+          }
+        } catch(e) {}
+      ">
+      Cancel
+    </button>
+
+    <!-- OK -->
+    <button type="button" class="btn btn-danger"
+      onclick="
+        try {
+          var tw = (typeof getTopWindow === 'function') ? getTopWindow() : ((typeof top !== 'undefined') ? top : self);
+          if (tw) {
+            if (tw.g_form) {
+              tw.g_form.submit('cancel_reservation');  /* Action name deiner UI Action */
+            } else if (typeof g_form !== 'undefined') {
+              g_form.submit('cancel_reservation');
+            }
+          }
+        } catch(e) {}
+        try {
+          if (typeof GlideDialogWindow !== 'undefined') {
+            var d2 = (GlideDialogWindow.get) ? GlideDialogWindow.get() : null;
+            if (d2) { d2.destroy(); }
+          }
+        } catch(e) {}
+        try {
+          if (typeof GlideModal !== 'undefined') {
+            var m2 = (GlideModal.get) ? GlideModal.get() : null;
+            if (m2) { m2.destroy(); }
+          }
+        } catch(e) {}
+      ">
+      OK
+    </button>
+  </div>
+</div>
+]]></html>
+        <name>nowroom_confirm_cancel</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-05 11:23:47</sys_created_on>
+        <sys_id>80fd8d539390fa1005087efdfaba10bd</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>nowroom_confirm_cancel</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ui_page_80fd8d539390fa1005087efdfaba10bd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-05 13:24:33</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NowRoom">699b40c09340761005087efdfaba109b</application>
+        <file_path/>
+        <instance_id>604bb1013b3da61016e44a8aa4e45ae4</instance_id>
+        <instance_name>dev349927</instance_name>
+        <name>sys_ui_page_80fd8d539390fa1005087efdfaba10bd</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script/&gt;&lt;description/&gt;&lt;direct&gt;true&lt;/direct&gt;&lt;endpoint&gt;x_1782765_nowroom_nowroom_confirm_cancel.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;div style="padding:16px;max-width:520px"&gt;
+  &lt;h2 style="margin:0 0 8px;"&gt;Cancel reservation?&lt;/h2&gt;
+  &lt;p style="margin:0 0 16px;"&gt;Do you really want to cancel this reservation?&lt;/p&gt;
+
+  &lt;div style="display:flex;gap:8px;justify-content:flex-end"&gt;
+    &lt;!-- Cancel --&gt;
+    &lt;button type="button" class="btn btn-default"
+      onclick="
+        try {
+          if (typeof GlideDialogWindow !== 'undefined') {
+            var d = (GlideDialogWindow.get) ? GlideDialogWindow.get() : null;
+            if (d) { d.destroy(); }
+          }
+        } catch(e) {}
+        try {
+          if (typeof GlideModal !== 'undefined') {
+            var m = (GlideModal.get) ? GlideModal.get() : null;
+            if (m) { m.destroy(); }
+          }
+        } catch(e) {}
+      "&gt;
+      Cancel
+    &lt;/button&gt;
+
+    &lt;!-- OK --&gt;
+    &lt;button type="button" class="btn btn-danger"
+      onclick="
+        try {
+          var tw = (typeof getTopWindow === 'function') ? getTopWindow() : ((typeof top !== 'undefined') ? top : self);
+          if (tw) {
+            if (tw.g_form) {
+              tw.g_form.submit('cancel_reservation');  /* Action name deiner UI Action */
+            } else if (typeof g_form !== 'undefined') {
+              g_form.submit('cancel_reservation');
+            }
+          }
+        } catch(e) {}
+        try {
+          if (typeof GlideDialogWindow !== 'undefined') {
+            var d2 = (GlideDialogWindow.get) ? GlideDialogWindow.get() : null;
+            if (d2) { d2.destroy(); }
+          }
+        } catch(e) {}
+        try {
+          if (typeof GlideModal !== 'undefined') {
+            var m2 = (GlideModal.get) ? GlideModal.get() : null;
+            if (m2) { m2.destroy(); }
+          }
+        } catch(e) {}
+      "&gt;
+      OK
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+]]&gt;&lt;/html&gt;&lt;name&gt;nowroom_confirm_cancel&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-10-05 11:23:47&lt;/sys_created_on&gt;&lt;sys_id&gt;80fd8d539390fa1005087efdfaba10bd&lt;/sys_id&gt;&lt;sys_mod_count&gt;11&lt;/sys_mod_count&gt;&lt;sys_name&gt;nowroom_confirm_cancel&lt;/sys_name&gt;&lt;sys_package display_value="NowRoom" source="x_1782765_nowroom"&gt;699b40c09340761005087efdfaba109b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NowRoom"&gt;699b40c09340761005087efdfaba109b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_80fd8d539390fa1005087efdfaba10bd&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-10-05 13:24:33&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>9762048</payload_hash>
+        <record_name>nowroom_confirm_cancel</record_name>
+        <reverted_from/>
+        <source>259b40c09340761005087efdfaba10a0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-05 13:24:33</sys_created_on>
+        <sys_id>27fae1179314fa1005087efdfaba10f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>199b48ba13e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-05 13:24:33</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>ebfae1178014fa10f3fb058e4d7646f2</update_guid>
+        <update_guid_history>ebfae1178014fa10f3fb058e4d7646f2:9762048,bfd9dd1320d0fa10ddea545e33005a0a:-1235521112,1cc8d9db1b90fa10dd005f0239fad5a2:-1559926187,d037591bae90fa1013e58e23af5615f5:-1588023275,9be6d5d7c190fa100080528f6bed95f7:1379338663,b2b5d9db1890fa1057892560a03a0e9f:-1204026242,8f55991bda90fa1016ae500e6370cfec:269853890,f194591b8a90fa10e655c69c18f070e2:-1355642423,806419173690fa107c97cfd753dd34cc:-652882921,2143591b2690fa10b27af08fd187c1bc:-1201693795,40229997c890fa10d2bdf9ef90a8c031:1894791140,2a5f89d3c590fa1004c600345edb076e:-408699440</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-05 15:08:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>14768c761f04434a90ae43b2145d28c4</sys_id>
+        <sys_metadata>80fd8d539390fa1005087efdfaba10bd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>nowroom_confirm_cancel</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_scope_delete display_value="">881a488c25c449949be0a03b4ec57f19</sys_scope_delete>
+        <sys_update_name>sys_ui_page_80fd8d539390fa1005087efdfaba10bd</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_80fd8d539390fa1005087efdfaba10bd">27fae1179314fa1005087efdfaba10f3</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-05 15:08:32</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

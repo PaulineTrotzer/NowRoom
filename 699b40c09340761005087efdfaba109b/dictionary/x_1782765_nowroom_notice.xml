@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="78322b3f93a4b29005087efdfaba1017" label="Notice" max_length="40" name="x_1782765_nowroom_notice" type="collection">
+        <element label="Message" max_length="225" name="message" type="string"/>
+        <element choice="1" default="requested" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="approved" sequence="20" value="approved"/>
+                <element inactive_on_update="false" label="cancelled" sequence="40" value="cancelled"/>
+                <element inactive_on_update="false" label="requested" sequence="10" value="requested"/>
+                <element inactive_on_update="false" label="rejected" sequence="30" value="rejected"/>
+            </choice>
+        </element>
+        <element label="link" max_length="1024" name="link" type="url"/>
+        <element label="Planned start" max_length="40" name="planned_start" type="glide_date_time"/>
+        <element label="Is read" max_length="40" name="is_read" type="boolean"/>
+        <element label="recipient" max_length="40" name="recipient" reference="sys_user" type="string"/>
+        <element label="Room" max_length="100" name="room" type="string"/>
+        <element label="reservation" max_length="40" name="reservation" reference="x_1782765_nowroom_reservation" type="string"/>
+        <index name="index">
+            <element name="recipient"/>
+            <element name="is_read"/>
+            <element name="planned_start"/>
+        </index>
+    </element>
+</database>

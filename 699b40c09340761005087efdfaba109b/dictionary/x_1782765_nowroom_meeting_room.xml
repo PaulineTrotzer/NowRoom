@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e9c054489340761005087efdfaba10d5" label="Meeting Room" max_length="40" name="x_1782765_nowroom_meeting_room" type="collection">
+        <element label="Floor" mandatory="true" max_length="40" name="floor" type="string"/>
+        <element display="true" label="Name" mandatory="true" max_length="40" name="name" type="string"/>
+        <element label="Owner" mandatory="true" max_length="32" name="owner" reference="sys_user" type="reference"/>
+        <element label="Building" mandatory="true" max_length="40" name="building" type="string"/>
+        <element choice="1" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Maintenance" sequence="200" value="maintenance"/>
+                <element inactive_on_update="false" label="Active" sequence="100" value="active"/>
+            </choice>
+        </element>
+        <element label="Capacity" mandatory="true" max_length="40" name="capacity" type="integer"/>
+        <index name="index">
+            <element name="owner"/>
+        </index>
+    </element>
+</database>

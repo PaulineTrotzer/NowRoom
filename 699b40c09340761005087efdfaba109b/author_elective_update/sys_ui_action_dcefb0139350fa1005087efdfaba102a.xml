@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name>cancel_reservation</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>!gs.nil(current.getUniqueValue()) &amp;&amp; current.getValue('opened_by') == gs.getUserID() &amp;&amp; String(current.getValue('reservation_status')) == 'requested'</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style>primary</form_style>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>Cancel Reservation </name>
+        <onclick>openCancelConfirm()</onclick>
+        <order>300</order>
+        <script><![CDATA[// = CLIENT =
+function openCancelConfirm() {
+	if (g_form.isNewRecord()) {
+		g_form.addErrorMessage('Please save the reservation before cancelling.');
+		return false;
+	}
+
+	// browser-Confirm + submit UI Action
+	if (confirm('Do you really want to cancel this reservation?')) {
+		g_form.submit('cancel_reservation');   // <- action name
+	}
+	return false;
+}
+
+// = SERVER =
+// sets reservation_status=‘cancelled’, setRedirectURL(current)
+if (typeof window === 'undefined') {
+	try {
+		gs.addInfoMessage('SERVER HIT: cancel_reservation');
+
+		if (!current || !current.getUniqueValue()) {
+			gs.addErrorMessage('record was not found.');
+		} else if (current.getValue('opened_by') != gs.getUserID()) {
+			gs.addErrorMessage('you are not allowed to cancel this reservation.');
+		} else {
+			var st = String(current.getValue('reservation_status') || '');
+			if (st === 'cancelled' || st === 'rejected') {
+				gs.addInfoMessage('reservation is already in a final state.');
+			} else if (st !== 'requested') {
+				gs.addErrorMessage('reservation can not be cancelled in the current state (' + st + ').');
+				action.setAbortAction(true);
+			} else {
+				current.setValue('reservation_status', 'cancelled');
+				current.update();
+				gs.addInfoMessage('reservation has been cancelled.');
+			}
+		}
+	} catch (e) {
+		gs.error('cancel UI action error: ' + e);
+		gs.addErrorMessage('unable to cancel reservation: ' + (e && e.message ? e.message : e));
+		action.setAbortAction(true);
+	}
+	finally {
+		action.setRedirectURL(current);
+	}
+}
+
+]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-05 10:31:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dcefb0139350fa1005087efdfaba102a</sys_id>
+        <sys_mod_count>45</sys_mod_count>
+        <sys_name>Cancel Reservation </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ui_action_dcefb0139350fa1005087efdfaba102a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-05 18:17:38</sys_updated_on>
+        <table>x_1782765_nowroom_reservation</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NowRoom">699b40c09340761005087efdfaba109b</application>
+        <file_path/>
+        <instance_id>604bb1013b3da61016e44a8aa4e45ae4</instance_id>
+        <instance_name>dev349927</instance_name>
+        <name>sys_ui_action_dcefb0139350fa1005087efdfaba102a</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name&gt;cancel_reservation&lt;/action_name&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;true&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments/&gt;&lt;condition&gt;!gs.nil(current.getUniqueValue()) &amp;amp;&amp;amp; current.getValue('opened_by') == gs.getUserID() &amp;amp;&amp;amp; String(current.getValue('reservation_status')) == 'requested'&lt;/condition&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style&gt;primary&lt;/form_style&gt;&lt;format_for_configurable_workspace&gt;false&lt;/format_for_configurable_workspace&gt;&lt;hint/&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;Cancel Reservation &lt;/name&gt;&lt;onclick&gt;openCancelConfirm()&lt;/onclick&gt;&lt;order&gt;300&lt;/order&gt;&lt;script&gt;&lt;![CDATA[// = CLIENT =
+function openCancelConfirm() {
+	if (g_form.isNewRecord()) {
+		g_form.addErrorMessage('Please save the reservation before cancelling.');
+		return false;
+	}
+
+	// browser-Confirm + submit UI Action
+	if (confirm('Do you really want to cancel this reservation?')) {
+		g_form.submit('cancel_reservation');   // &lt;- action name
+	}
+	return false;
+}
+
+// = SERVER =
+// sets reservation_status=‘cancelled’, setRedirectURL(current)
+if (typeof window === 'undefined') {
+	try {
+		gs.addInfoMessage('SERVER HIT: cancel_reservation');
+
+		if (!current || !current.getUniqueValue()) {
+			gs.addErrorMessage('record was not found.');
+		} else if (current.getValue('opened_by') != gs.getUserID()) {
+			gs.addErrorMessage('you are not allowed to cancel this reservation.');
+		} else {
+			var st = String(current.getValue('reservation_status') || '');
+			if (st === 'cancelled' || st === 'rejected') {
+				gs.addInfoMessage('reservation is already in a final state.');
+			} else if (st !== 'requested') {
+				gs.addErrorMessage('reservation can not be cancelled in the current state (' + st + ').');
+				action.setAbortAction(true);
+			} else {
+				current.setValue('reservation_status', 'cancelled');
+				current.update();
+				gs.addInfoMessage('reservation has been cancelled.');
+			}
+		}
+	} catch (e) {
+		gs.error('cancel UI action error: ' + e);
+		gs.addErrorMessage('unable to cancel reservation: ' + (e &amp;&amp; e.message ? e.message : e));
+		action.setAbortAction(true);
+	}
+	finally {
+		action.setRedirectURL(current);
+	}
+}
+
+]]&gt;&lt;/script&gt;&lt;show_insert&gt;false&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-10-05 10:31:53&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;dcefb0139350fa1005087efdfaba102a&lt;/sys_id&gt;&lt;sys_mod_count&gt;45&lt;/sys_mod_count&gt;&lt;sys_name&gt;Cancel Reservation &lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="NowRoom" source="x_1782765_nowroom"&gt;699b40c09340761005087efdfaba109b&lt;/sys_package&gt;&lt;sys_policy&gt;read&lt;/sys_policy&gt;&lt;sys_scope display_value="NowRoom"&gt;699b40c09340761005087efdfaba109b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_dcefb0139350fa1005087efdfaba102a&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-10-05 18:17:38&lt;/sys_updated_on&gt;&lt;table&gt;x_1782765_nowroom_reservation&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-369154950</payload_hash>
+        <record_name>Cancel Reservation </record_name>
+        <reverted_from/>
+        <source>259b40c09340761005087efdfaba10a0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-05 18:17:38</sys_created_on>
+        <sys_id>f41e2a9b9358fa1005087efdfaba10d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>199b597f4d90000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-05 18:17:38</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>fc1e2a9b4258fa10728a4a16bf3485d3</update_guid>
+        <update_guid_history>fc1e2a9b4258fa10728a4a16bf3485d3:-369154950,0b3d66db5758fa10ad8000ce729b3cab:-582654876,13bb66d78558fa1050ac5a54040bc26b:-369154950,626a62d7d358fa1011401fdf380f0fda:-1859825111,1cd542571794fa103b0f76eb6cd58d2b:1856291090,5ff34697a694fa10ad603311d07499b0:566274326,53d24613c894fa103825cd0e47fb5cf4:-1007327782,1892c29b9d54fa10feb7301a7565feeb:-956301674,e40df19b2454fa10555987bf958d3446:1044251820,85d9f11bca54fa10ac4a3bb0da0254be:-1013434901,08b8bd974954fa10a38b5c3a50cd6cac:-546140653,8e977d97c754fa10ff46c15a3539615e:1717836419,c5f6bd53af54fa10acca5848c573df06:535135471,e7a4bd13a254fa100078255ed9a26f5c:-786405513,bf93b953ad54fa10af0efe4df5a3290c:-191780944,1bf231d76214fa10f90dcb01b5c2a894:-1497441792,47b2b113ba54fa10de138629700256bf:-285244644,cc8231d73b14fa10a18761d23e80f6c2:-1497441792,b4efe117f714fa100b7179a03b7774fa:548372502,478ee95bee14fa1000f8dc2cca694db0:-1396060593,4b4d69d3cd14fa10beb9edfc9b1918df:1842998777,9fe9a5574214fa108d6557f97cc1d535:545270457,be78219fbdd0fa1014e0704b3164fddd:-274472275,13a6a5df96d0fa1085226ccb3dc4eb39:-449092366,e1b5e91f08d0fa10f76d5c7acc32cf9c:465820053,c515691ffdd0fa101fa468e816c5eb48:-1618716262,3f24a51fd5d0fa10eb508ba5f83cd447:187855504,cfd2ed17f4d0fa10fd51d9eb701778b3:1108808558,e7122d5ba2d0fa10ede2d505088726bc:-769818680,f1d025178ed0fa102cc510508ae8dbe6:-1114138904,e500e91b75d0fa109802478a9bb0ca9d:-647573442,3e2fdd13c0d0fa10ab8e63c86f0bd415:-107948247,c20ddd1702d0fa108886a4757acc96a8:1148861802,e47c95d35fd0fa100dd9d14d5f0e93bf:-1285356567,978b51d345d0fa1042899321efe8d67e:-1932087387,dc5b1993e7d0fa1027a8f2f4c74fd79a:1535317957,4b1b595f1d90fa10ebca795d10b1af3a:928962898,cfa119175290fa10fd27915912be2938:810268138,89ff8d539090fa10d338e2d28e57bdd1:423171488,e12cc51f3b50fa10df8fb5e477f2c235:-1417685411,728b499f7550fa1024fc9b5dbda06716:954218954,ed394d5bf550fa106ae9b3fccbc3e033:1687881300,c448811b9c50fa10e9ec15608be48a44:-138647982,6bf6015bde50fa10d3940b53ff2c028a:-83892607,af1581133450fa1080379418f5938a37:-1941763952,9a73895fa21cba10400712411ba6c863:1027395113</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-05 18:26:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>2b27ffd34de6458b8a2e28b6ad29c751</sys_id>
+        <sys_metadata>dcefb0139350fa1005087efdfaba102a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cancel Reservation </sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_parent display_value="Reservation">c7bae96893ccf61005087efdfaba101b</sys_parent>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_scope_delete display_value="">881a488c25c449949be0a03b4ec57f19</sys_scope_delete>
+        <sys_update_name>sys_ui_action_dcefb0139350fa1005087efdfaba102a</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_dcefb0139350fa1005087efdfaba102a">f41e2a9b9358fa1005087efdfaba10d4</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-05 18:26:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

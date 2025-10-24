@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="DELETE">
+        <active>true</active>
+        <conditions table="x_1782765_nowroom_reservation">planned_startISNOTEMPTY^planned_endISNOTEMPTY^EQ<item endquery="false" field="planned_start" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="false" field="planned_end" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>true</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+	g_form.hideFieldMsg('planned_end', true);
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+	var s = g_form.getValue('planned_start');
+	var e = g_form.getValue('planned_end');
+
+	
+
+	if (!s || !e) return;
+
+	var start = new Date(s.replace(" ", "T"));
+	var end = new Date(e.replace(" ", "T"));
+
+	if (end <= start) {
+		g_form.showFieldMsg('planned_end', 'Planned End must be after Planned Start', 'error');
+	}
+}
+]]></script_true>
+        <set_values/>
+        <short_description>Validate Planned Start before End</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-16 18:55:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>357f341d93c4fa1005087efdfaba109b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Validate Planned Start before End</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ui_policy_357f341d93c4fa1005087efdfaba109b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-16 19:07:24</sys_updated_on>
+        <table>x_1782765_nowroom_reservation</table>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_ui_policy>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NowRoom">699b40c09340761005087efdfaba109b</application>
+        <file_path/>
+        <instance_id>604bb1013b3da61016e44a8aa4e45ae4</instance_id>
+        <instance_name>dev349927</instance_name>
+        <name>sys_ui_policy_357f341d93c4fa1005087efdfaba109b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_policy"&gt;&lt;sys_ui_policy action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;conditions table="x_1782765_nowroom_reservation"&gt;planned_startISNOTEMPTY^planned_endISNOTEMPTY^EQ&lt;item endquery="false" field="planned_start" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/&gt;&lt;item endquery="false" field="planned_end" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/&gt;&lt;item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/&gt;&lt;/conditions&gt;&lt;description/&gt;&lt;global&gt;true&lt;/global&gt;&lt;inherit&gt;false&lt;/inherit&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;model_id/&gt;&lt;model_table/&gt;&lt;on_load&gt;true&lt;/on_load&gt;&lt;order&gt;100&lt;/order&gt;&lt;reverse_if_false&gt;true&lt;/reverse_if_false&gt;&lt;run_scripts&gt;true&lt;/run_scripts&gt;&lt;script_false&gt;&lt;![CDATA[function onCondition() {
+	g_form.hideFieldMsg('planned_end', true);
+}]]&gt;&lt;/script_false&gt;&lt;script_true&gt;&lt;![CDATA[function onCondition() {
+	var s = g_form.getValue('planned_start');
+	var e = g_form.getValue('planned_end');
+
+	
+
+	if (!s || !e) return;
+
+	var start = new Date(s.replace(" ", "T"));
+	var end = new Date(e.replace(" ", "T"));
+
+	if (end &lt;= start) {
+		g_form.showFieldMsg('planned_end', 'Planned End must be after Planned Start', 'error');
+	}
+}
+]]&gt;&lt;/script_true&gt;&lt;set_values/&gt;&lt;short_description&gt;Validate Planned Start before End&lt;/short_description&gt;&lt;sys_class_name&gt;sys_ui_policy&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-09-16 18:55:38&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;357f341d93c4fa1005087efdfaba109b&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Validate Planned Start before End&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="NowRoom" source="x_1782765_nowroom"&gt;699b40c09340761005087efdfaba109b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NowRoom"&gt;699b40c09340761005087efdfaba109b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_policy_357f341d93c4fa1005087efdfaba109b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-09-16 19:07:24&lt;/sys_updated_on&gt;&lt;table&gt;x_1782765_nowroom_reservation&lt;/table&gt;&lt;ui_type&gt;10&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_ui_policy&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1301405281</payload_hash>
+        <record_name>Validate Planned Start before End</record_name>
+        <reverted_from/>
+        <source>259b40c09340761005087efdfaba10a0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-16 19:07:24</sys_created_on>
+        <sys_id>ac43c95d93c4fa1005087efdfaba106e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19953ecb18b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-16 19:07:24</sys_updated_on>
+        <type>UI Policy</type>
+        <update_guid>a443c95dadc4fa105454c220d5f0d56e</update_guid>
+        <update_guid_history>a443c95dadc4fa105454c220d5f0d56e:1301405281,4961c199ffc4fa101d9fdb9b15c38b9a:-457984572,b301c95da5c4fa10e796450fc9773767:-77004828,589081997cc4fa10de338ef4536356db:33352213</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-16 19:08:34</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy">sys_ui_policy</sys_db_object>
+        <sys_id>2ffa9385df2f45bda466d0f35787cf89</sys_id>
+        <sys_metadata>357f341d93c4fa1005087efdfaba109b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Validate Planned Start before End</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_parent display_value="Reservation">c7bae96893ccf61005087efdfaba101b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_scope_delete display_value="">881a488c25c449949be0a03b4ec57f19</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_357f341d93c4fa1005087efdfaba109b</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_357f341d93c4fa1005087efdfaba109b">ac43c95d93c4fa1005087efdfaba106e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-16 19:08:34</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

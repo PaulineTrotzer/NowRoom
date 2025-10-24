@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Additional Info" section_id="38d95bf493887a1005087efdfaba1032" sys_domain="global" table="x_1782765_nowroom_reservation" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-09-15 17:37:14</sys_created_on>
+            <sys_id>ce052330934c7a1005087efdfaba106f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional Info" display_value="Additional Info" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">38d95bf493887a1005087efdfaba1032</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-09-15 17:37:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-09-15 17:37:14</sys_created_on>
+            <sys_id>c6052330934c7a1005087efdfaba1070</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional Info" display_value="Additional Info" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">38d95bf493887a1005087efdfaba1032</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-09-15 17:37:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>work_notes</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-09-15 17:37:14</sys_created_on>
+            <sys_id>ce052330934c7a1005087efdfaba1070</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional Info" display_value="Additional Info" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">38d95bf493887a1005087efdfaba1032</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-09-15 17:37:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-09-15 17:37:14</sys_created_on>
+            <sys_id>c6052330934c7a1005087efdfaba1071</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional Info" display_value="Additional Info" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">38d95bf493887a1005087efdfaba1032</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-09-15 17:37:14</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-09-15 17:37:14</sys_created_on>
+            <sys_id>ce052330934c7a1005087efdfaba1071</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional Info" display_value="Additional Info" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">38d95bf493887a1005087efdfaba1032</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-09-15 17:37:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-09-15 17:37:14</sys_created_on>
+            <sys_id>c6052330934c7a1005087efdfaba1072</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Additional Info" display_value="Additional Info" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">38d95bf493887a1005087efdfaba1032</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-09-15 17:37:14</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Additional Info</caption>
+            <header>false</header>
+            <name>x_1782765_nowroom_reservation</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-09-15 16:48:16</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>38d95bf493887a1005087efdfaba1032</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>x_1782765_nowroom_reservation</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+            <sys_update_name>sys_ui_section_38d95bf493887a1005087efdfaba1032</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-09-15 17:29:13</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NowRoom">699b40c09340761005087efdfaba109b</application>
+        <file_path/>
+        <instance_id>604bb1013b3da61016e44a8aa4e45ae4</instance_id>
+        <instance_name>dev349927</instance_name>
+        <name>sys_ui_section_38d95bf493887a1005087efdfaba1032</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Additional Info" section_id="38d95bf493887a1005087efdfaba1032" sys_domain="global" table="x_1782765_nowroom_reservation" version="3" view=""><sys_ui_element action="INSERT_OR_UPDATE"><element>short_description</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-15 17:37:14</sys_created_on><sys_id>ce052330934c7a1005087efdfaba106f</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Additional Info" display_value="Additional Info" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">38d95bf493887a1005087efdfaba1032</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-15 17:37:14</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>description</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-15 17:37:14</sys_created_on><sys_id>c6052330934c7a1005087efdfaba1070</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Additional Info" display_value="Additional Info" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">38d95bf493887a1005087efdfaba1032</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-15 17:37:14</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>work_notes</element><position>2</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-15 17:37:14</sys_created_on><sys_id>ce052330934c7a1005087efdfaba1070</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Additional Info" display_value="Additional Info" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">38d95bf493887a1005087efdfaba1032</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-15 17:37:14</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>.split</element><position>3</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-15 17:37:14</sys_created_on><sys_id>c6052330934c7a1005087efdfaba1071</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Additional Info" display_value="Additional Info" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">38d95bf493887a1005087efdfaba1032</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-15 17:37:14</sys_updated_on><sys_user/><type>.split</type></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>active</element><position>4</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-15 17:37:14</sys_created_on><sys_id>ce052330934c7a1005087efdfaba1071</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Additional Info" display_value="Additional Info" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">38d95bf493887a1005087efdfaba1032</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-15 17:37:14</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>state</element><position>5</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-15 17:37:14</sys_created_on><sys_id>c6052330934c7a1005087efdfaba1072</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Additional Info" display_value="Additional Info" name="x_1782765_nowroom_reservation" sys_domain="global" view="Default view">38d95bf493887a1005087efdfaba1032</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-15 17:37:14</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Additional Info</caption><header>false</header><name>x_1782765_nowroom_reservation</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-15 16:48:16</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>38d95bf493887a1005087efdfaba1032</sys_id><sys_mod_count>2</sys_mod_count><sys_name>x_1782765_nowroom_reservation</sys_name><sys_overrides/><sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package><sys_policy/><sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope><sys_update_name>sys_ui_section_38d95bf493887a1005087efdfaba1032</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-15 17:29:13</sys_updated_on><sys_user/><title>true</title><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-96253037</payload_hash>
+        <record_name>Reservation</record_name>
+        <reverted_from/>
+        <source>259b40c09340761005087efdfaba10a0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-15 17:37:14</sys_created_on>
+        <sys_id>4a052330934c7a1005087efdfaba1074</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1994e73c7940000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-15 17:37:14</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>820523301f4c7a1056b6c8ecfcf8f974</update_guid>
+        <update_guid_history>820523301f4c7a1056b6c8ecfcf8f974:-96253037,b033ab7c7e0c7a103619da00605bdb33:-544654052,6c336b7c5d0c7a10aa06a3041a4970ba:-1110711205,c6d06bb8d20c7a10320e3266e7b95c9e:649167847,bdd06bb86c0c7a10b9f1026b83b37b4c:320052934,a52c5734c50c7a108aa7d6fe4c356a23:992424679,423b13f09e0c7a1087bd459c1b4970f8:-1474155405,4e3b13f08b0c7a106672581b077339ea:-429384302</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-15 17:39:07</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>3589a64358394d2b9e7587a7ff25e1f9</sys_id>
+        <sys_metadata>38d95bf493887a1005087efdfaba1032</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Additional Info</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_parent display_value="Reservation">c7bae96893ccf61005087efdfaba101b</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_scope_delete display_value="">881a488c25c449949be0a03b4ec57f19</sys_scope_delete>
+        <sys_update_name>sys_ui_section_38d95bf493887a1005087efdfaba1032</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_38d95bf493887a1005087efdfaba1032">4a052330934c7a1005087efdfaba1074</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-15 17:39:07</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

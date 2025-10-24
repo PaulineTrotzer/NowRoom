@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application/>
+        <filter/>
+        <name>Reservations</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_1782765_nowroom.reservation_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-14 14:06:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b03be56c93ccf61005087efdfaba10e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reservations</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ui_module_b03be56c93ccf61005087efdfaba10e2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-14 14:06:27</sys_updated_on>
+        <table>x_1782765_nowroom_reservation</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NowRoom">699b40c09340761005087efdfaba109b</application>
+        <file_path/>
+        <instance_id>604bb1013b3da61016e44a8aa4e45ae4</instance_id>
+        <instance_name>dev349927</instance_name>
+        <name>sys_ui_module_b03be56c93ccf61005087efdfaba10e2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application/><filter/><name>Reservations</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_1782765_nowroom.reservation_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-09-14 14:06:27</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>b03be56c93ccf61005087efdfaba10e2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Reservations</sys_name><sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package><sys_policy/><sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope><sys_update_name>sys_ui_module_b03be56c93ccf61005087efdfaba10e2</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-09-14 14:06:27</sys_updated_on><table>x_1782765_nowroom_reservation</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>1914043558</payload_hash>
+        <record_name>Reservations</record_name>
+        <reverted_from/>
+        <source>259b40c09340761005087efdfaba10a0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-14 14:39:22</sys_created_on>
+        <sys_id>feb2fda493003a1005087efdfaba1093</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19948aa93630000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-14 14:39:22</sys_updated_on>
+        <type>Module</type>
+        <update_guid>b43be56c5bccf610456b02525ab66ae4</update_guid>
+        <update_guid_history>b43be56c5bccf610456b02525ab66ae4:1784873470,b43be56c5bccf610456b02525ab66ae4:1784873470</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-09-14 14:58:47</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>459cd4111e5641e6a137e50a334acd04</sys_id>
+        <sys_metadata>b03be56c93ccf61005087efdfaba10e2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reservations</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_scope_delete display_value="">881a488c25c449949be0a03b4ec57f19</sys_scope_delete>
+        <sys_update_name>sys_ui_module_b03be56c93ccf61005087efdfaba10e2</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_b03be56c93ccf61005087efdfaba10e2">feb2fda493003a1005087efdfaba1093</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-09-14 14:58:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

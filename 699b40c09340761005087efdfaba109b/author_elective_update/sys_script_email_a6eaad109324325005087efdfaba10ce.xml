@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="DELETE">
+        <name>latest_reject_reason</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+
+   var reason = '';
+
+  try {
+    if (current && current.getTableName && current.getTableName() == 'sysapproval_approver') {
+      if (current.getValue('state') == 'rejected')
+        reason = current.comments.getJournalEntry(1) || '';
+    } else if (current) {
+      var appr = new GlideRecord('sysapproval_approver');
+      appr.addQuery('document_id', current.getUniqueValue());
+      appr.addQuery('state', 'rejected');
+      appr.orderByDesc('sys_updated_on');
+      appr.setLimit(1);
+      appr.query();
+      if (appr.next())
+        reason = appr.comments.getJournalEntry(1) || '';
+    }
+  } catch (e) {}
+
+  // als Variable für den Body bereitstellen
+  template.variables.put('reject_reason', reason);
+
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:58:21</sys_created_on>
+        <sys_id>a6eaad109324325005087efdfaba10ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>latest_reject_reason</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_script_email_a6eaad109324325005087efdfaba10ce</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:58:21</sys_updated_on>
+    </sys_script_email>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NowRoom">699b40c09340761005087efdfaba109b</application>
+        <file_path/>
+        <instance_id>604bb1013b3da61016e44a8aa4e45ae4</instance_id>
+        <instance_name>dev349927</instance_name>
+        <name>sys_script_email_a6eaad109324325005087efdfaba10ce</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_email"&gt;&lt;sys_script_email action="INSERT_OR_UPDATE"&gt;&lt;name&gt;latest_reject_reason&lt;/name&gt;&lt;new_lines_to_html&gt;false&lt;/new_lines_to_html&gt;&lt;script&gt;&lt;![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+
+   var reason = '';
+
+  try {
+    if (current &amp;&amp; current.getTableName &amp;&amp; current.getTableName() == 'sysapproval_approver') {
+      if (current.getValue('state') == 'rejected')
+        reason = current.comments.getJournalEntry(1) || '';
+    } else if (current) {
+      var appr = new GlideRecord('sysapproval_approver');
+      appr.addQuery('document_id', current.getUniqueValue());
+      appr.addQuery('state', 'rejected');
+      appr.orderByDesc('sys_updated_on');
+      appr.setLimit(1);
+      appr.query();
+      if (appr.next())
+        reason = appr.comments.getJournalEntry(1) || '';
+    }
+  } catch (e) {}
+
+  // als Variable für den Body bereitstellen
+  template.variables.put('reject_reason', reason);
+
+})(current, template, email, email_action, event);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_email&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-10-08 15:58:21&lt;/sys_created_on&gt;&lt;sys_id&gt;a6eaad109324325005087efdfaba10ce&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;latest_reject_reason&lt;/sys_name&gt;&lt;sys_package display_value="NowRoom" source="x_1782765_nowroom"&gt;699b40c09340761005087efdfaba109b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NowRoom"&gt;699b40c09340761005087efdfaba109b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_email_a6eaad109324325005087efdfaba10ce&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-10-08 15:58:21&lt;/sys_updated_on&gt;&lt;/sys_script_email&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1188588413</payload_hash>
+        <record_name>latest_reject_reason</record_name>
+        <reverted_from/>
+        <source>259b40c09340761005087efdfaba10a0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 15:58:21</sys_created_on>
+        <sys_id>b1faa9509324325005087efdfaba108e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>199c48b84640000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 15:58:21</sys_updated_on>
+        <type>Email Script</type>
+        <update_guid>b5faa950c524325089be38506f0c168d</update_guid>
+        <update_guid_history>b5faa950c524325089be38506f0c168d:-1188588413</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 16:05:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_email">sys_script_email</sys_db_object>
+        <sys_id>19a19f5a1c384ab482f8f63997fb1d64</sys_id>
+        <sys_metadata>a6eaad109324325005087efdfaba10ce</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>latest_reject_reason</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_scope_delete display_value="">881a488c25c449949be0a03b4ec57f19</sys_scope_delete>
+        <sys_update_name>sys_script_email_a6eaad109324325005087efdfaba10ce</sys_update_name>
+        <sys_update_version display_value="sys_script_email_a6eaad109324325005087efdfaba10ce">b1faa9509324325005087efdfaba108e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 16:05:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

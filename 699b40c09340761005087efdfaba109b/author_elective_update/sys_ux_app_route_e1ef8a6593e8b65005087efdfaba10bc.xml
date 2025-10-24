@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="Room Booking Space">bf68b96093e4725005087efdfaba1077</app_config>
+        <description/>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <name>book-room</name>
+        <optional_parameters>query,extraParams,views,selectedTab</optional_parameters>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>book-room</route_type>
+        <screen_type display_value="book-room">d9ef8a6593e8b65005087efdfaba10b7</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-12 15:52:07</sys_created_on>
+        <sys_id>e1ef8a6593e8b65005087efdfaba10bc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>book-room</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ux_app_route_e1ef8a6593e8b65005087efdfaba10bc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-12 16:12:51</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=e1ef8a6593e8b65005087efdfaba10bc"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NowRoom">699b40c09340761005087efdfaba109b</application>
+        <file_path/>
+        <instance_id>604bb1013b3da61016e44a8aa4e45ae4</instance_id>
+        <instance_name>dev349927</instance_name>
+        <name>sys_ux_app_route_e1ef8a6593e8b65005087efdfaba10bc</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config display_value="Room Booking Space">bf68b96093e4725005087efdfaba1077</app_config><description/><extension_point/><fields/><icon/><name>book-room</name><optional_parameters>query,extraParams,views,selectedTab</optional_parameters><order>0</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><parent_macroponent_composition_element_id/><route_type>book-room</route_type><screen_type display_value="book-room">d9ef8a6593e8b65005087efdfaba10b7</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-10-12 15:52:07</sys_created_on><sys_id>e1ef8a6593e8b65005087efdfaba10bc</sys_id><sys_mod_count>1</sys_mod_count><sys_name>book-room</sys_name><sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package><sys_policy/><sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope><sys_update_name>sys_ux_app_route_e1ef8a6593e8b65005087efdfaba10bc</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-10-12 16:12:51</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=e1ef8a6593e8b65005087efdfaba10bc"/></record_update>]]></payload>
+        <payload_hash>1315532361</payload_hash>
+        <record_name>book-room</record_name>
+        <reverted_from/>
+        <source>259b40c09340761005087efdfaba10a0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-12 16:12:51</sys_created_on>
+        <sys_id>05a45eed93e8b65005087efdfaba1087</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>199d932384d0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-12 16:12:51</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>0da45eedb1e8b6509929f2f9a8744986</update_guid>
+        <update_guid_history>0da45eedb1e8b6509929f2f9a8744986:1315532361,69ef8a6515e8b650797effce5cae96be:458397362</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-19 12:22:33</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>123c525cd8564e78a8d99eff7ce972a4</sys_id>
+        <sys_metadata>e1ef8a6593e8b65005087efdfaba10bc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>book-room</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_scope_delete display_value="">881a488c25c449949be0a03b4ec57f19</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_e1ef8a6593e8b65005087efdfaba10bc</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_e1ef8a6593e8b65005087efdfaba10bc">05a45eed93e8b65005087efdfaba1087</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-19 12:22:33</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

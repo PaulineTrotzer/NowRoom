@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_dictionary action="DELETE" element="events_json" table="x_1782765_nowroom_ui_events_feed">
+        <active>true</active>
+        <array>false</array>
+        <attributes/>
+        <audit>false</audit>
+        <calculation><![CDATA[(function () {
+  var out = [];
+  var gr = new GlideRecord('x_1782765_nowroom_ui_events'); // deine UI-Events
+  gr.orderBy('start');
+  gr.setLimit(200);
+  gr.query();
+  while (gr.next()) {
+    var s = gr.getValue('start');
+    var e = gr.getValue('end');
+    if (!s || !e) continue;
+    out.push({
+      id: gr.getUniqueValue(),
+      title: gr.getValue('title') || 'Event',
+      start: s.replace(' ', 'T'),
+      end:   e.replace(' ', 'T')
+    });
+  }
+  return out;
+})();
+]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label>Events json</column_label>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>events_json</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <internal_type display_value="String">string</internal_type>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <name>x_1782765_nowroom_ui_events_feed</name>
+        <next_element/>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_dictionary</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-18 12:54:22</sys_created_on>
+        <sys_id>fa9020af9360329005087efdfaba1001</sys_id>
+        <sys_name>Events json</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_dictionary_x_1782765_nowroom_ui_events_feed_events_json</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-18 13:56:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>true</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_dictionary>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NowRoom">699b40c09340761005087efdfaba109b</application>
+        <file_path/>
+        <instance_id>604bb1013b3da61016e44a8aa4e45ae4</instance_id>
+        <instance_name>dev349927</instance_name>
+        <name>sys_dictionary_x_1782765_nowroom_ui_events_feed_events_json</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update&gt;&lt;sys_dictionary action="INSERT_OR_UPDATE" element="events_json" table="x_1782765_nowroom_ui_events_feed"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;attributes/&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function () {
+  var out = [];
+  var gr = new GlideRecord('x_1782765_nowroom_ui_events'); // deine UI-Events
+  gr.orderBy('start');
+  gr.setLimit(200);
+  gr.query();
+  while (gr.next()) {
+    var s = gr.getValue('start');
+    var e = gr.getValue('end');
+    if (!s || !e) continue;
+    out.push({
+      id: gr.getUniqueValue(),
+      title: gr.getValue('title') || 'Event',
+      start: s.replace(' ', 'T'),
+      end:   e.replace(' ', 'T')
+    });
+  }
+  return out;
+})();
+]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label&gt;Events json&lt;/column_label&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;events_json&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;internal_type display_value="String"&gt;string&lt;/internal_type&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;4000&lt;/max_length&gt;&lt;name&gt;x_1782765_nowroom_ui_events_feed&lt;/name&gt;&lt;next_element/&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_dictionary&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-10-18 12:54:22&lt;/sys_created_on&gt;&lt;sys_id&gt;fa9020af9360329005087efdfaba1001&lt;/sys_id&gt;&lt;sys_name&gt;Events json&lt;/sys_name&gt;&lt;sys_package display_value="NowRoom" source="x_1782765_nowroom"&gt;699b40c09340761005087efdfaba109b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NowRoom"&gt;699b40c09340761005087efdfaba109b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_dictionary_x_1782765_nowroom_ui_events_feed_events_json&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-10-18 13:56:08&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;true&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_dictionary&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-433331949</payload_hash>
+        <record_name>UI Events Feed.Events json</record_name>
+        <reverted_from/>
+        <source>259b40c09340761005087efdfaba10a0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-18 13:56:08</sys_created_on>
+        <sys_id>89ee20e393e0329005087efdfaba1087</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>199f79b37080000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-18 13:56:08</sys_updated_on>
+        <type>Dictionary</type>
+        <update_guid>81ee20e3e3e03290e0647d313c6e7f87</update_guid>
+        <update_guid_history>81ee20e3e3e03290e0647d313c6e7f87:-433331949,5ee3a42779a03290cc6606d3ec50b7e9:-171877405,e77128630ba03290a8eb7ae9304223f5:141207097,0a616863bda032906a87afeb73046131:-695442776,5e51e86340a0329063292d2293f49596:2111445395,c4c06c2313a0329089c9ce0dbf924918:36892615</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-19 13:58:01</sys_created_on>
+        <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
+        <sys_id>066fb018aa1140d8b5a66e6cb3b54e40</sys_id>
+        <sys_metadata>fa9020af9360329005087efdfaba1001</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Events json</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_parent display_value="">cb50ec679360329005087efdfaba1029</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_scope_delete display_value="">881a488c25c449949be0a03b4ec57f19</sys_scope_delete>
+        <sys_update_name>sys_dictionary_x_1782765_nowroom_ui_events_feed_events_json</sys_update_name>
+        <sys_update_version display_value="sys_dictionary_x_1782765_nowroom_ui_events_feed_events_json">89ee20e393e0329005087efdfaba1087</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-19 13:58:01</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Default">c2f9f1a09368725005087efdfaba1080</macroponent>
+        <name>mapReservationsToEvents</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({ api, event, helpers, imports }) {
+  // 1) Data Resource (ID ggf. anpassen)
+  var dr = api.data.record_list_data_fetch_1 || api.data.record_list_data_fetch || {};
+  var rows = dr.result || dr.data || [];
+
+  // 2) Datum → ISO (falls nötig; wenn schon ISO kommt, wird es einfach zurückgegeben)
+  function toISO(v) {
+    if (!v) return null;
+    var d = new Date(v);
+    return isNaN(d.getTime()) ? v : d.toISOString();
+  }
+
+  // 3) Mapping: Records -> Calendar Events
+  var events = rows.map(function (r) {
+    var roomDisplay = r.room && (r.room.display_value || r.room.name || r.room);
+    var title = roomDisplay || r.short_description || "Reservation";
+
+    return {
+      id: r.sys_id,
+      title: title,
+      start: toISO(r.planned_start),
+      end: toISO(r.planned_end),
+      extendedProps: {
+        sys_id: r.sys_id,
+        room: roomDisplay || ""
+      }
+    };
+  }).filter(function (e) {
+    return e.start && e.end;
+  });
+
+  // 4) Output fürs Data-Binding
+  return { events: events };
+}
+]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-12 18:37:40</sys_created_on>
+        <sys_id>1111aeed932cb65005087efdfaba1041</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>mapReservationsToEvents</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_update_name>sys_ux_client_script_1111aeed932cb65005087efdfaba1041</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-12 18:37:40</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NowRoom">699b40c09340761005087efdfaba109b</application>
+        <file_path/>
+        <instance_id>604bb1013b3da61016e44a8aa4e45ae4</instance_id>
+        <instance_name>dev349927</instance_name>
+        <name>sys_ux_client_script_1111aeed932cb65005087efdfaba1041</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Default"&gt;c2f9f1a09368725005087efdfaba1080&lt;/macroponent&gt;&lt;name&gt;mapReservationsToEvents&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({ api, event, helpers, imports }) {
+  // 1) Data Resource (ID ggf. anpassen)
+  var dr = api.data.record_list_data_fetch_1 || api.data.record_list_data_fetch || {};
+  var rows = dr.result || dr.data || [];
+
+  // 2) Datum → ISO (falls nötig; wenn schon ISO kommt, wird es einfach zurückgegeben)
+  function toISO(v) {
+    if (!v) return null;
+    var d = new Date(v);
+    return isNaN(d.getTime()) ? v : d.toISOString();
+  }
+
+  // 3) Mapping: Records -&gt; Calendar Events
+  var events = rows.map(function (r) {
+    var roomDisplay = r.room &amp;&amp; (r.room.display_value || r.room.name || r.room);
+    var title = roomDisplay || r.short_description || "Reservation";
+
+    return {
+      id: r.sys_id,
+      title: title,
+      start: toISO(r.planned_start),
+      end: toISO(r.planned_end),
+      extendedProps: {
+        sys_id: r.sys_id,
+        room: roomDisplay || ""
+      }
+    };
+  }).filter(function (e) {
+    return e.start &amp;&amp; e.end;
+  });
+
+  // 4) Output fürs Data-Binding
+  return { events: events };
+}
+]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-10-12 18:37:40&lt;/sys_created_on&gt;&lt;sys_id&gt;1111aeed932cb65005087efdfaba1041&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;mapReservationsToEvents&lt;/sys_name&gt;&lt;sys_package display_value="NowRoom" source="x_1782765_nowroom"&gt;699b40c09340761005087efdfaba109b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NowRoom"&gt;699b40c09340761005087efdfaba109b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_1111aeed932cb65005087efdfaba1041&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-10-12 18:37:40&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-439074981</payload_hash>
+        <record_name>mapReservationsToEvents</record_name>
+        <reverted_from/>
+        <source>259b40c09340761005087efdfaba10a0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-12 18:37:40</sys_created_on>
+        <sys_id>d2c576e593acb65005087efdfaba1053</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>199d9b6ce440000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-12 18:37:40</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>96c576e582acb6506d9cc6373fc12452</update_guid>
+        <update_guid_history>96c576e582acb6506d9cc6373fc12452:-439074981</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 10:53:29</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>786c34dc75e34d00898339b118d90000</sys_id>
+        <sys_metadata>1111aeed932cb65005087efdfaba1041</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>mapReservationsToEvents</sys_name>
+        <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
+        <sys_scope_delete display_value="">881a488c25c449949be0a03b4ec57f19</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_1111aeed932cb65005087efdfaba1041</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_1111aeed932cb65005087efdfaba1041">d2c576e593acb65005087efdfaba1053</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 10:53:29</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -25,8 +25,11 @@ Room-booking app built with **ServiceNow App Engine / Workspace** — easily res
 - Roles & permissions in Workspace and on the Meeting Room form
 
 ## Screenshots
-![Reservation List](docs/screenshots/reservations-list.png)
-![Reservation Detail](docs/screenshots/reservation-detail.png)
+- **Manager Workspace**  
+  ![Manager Workspace](manager-workspace.png)
+- **Fulfiller Workspace**  
+  ![Fulfiller Workspace](fulfiller-workspace.png)
+
 
 ## Roles & Permissions
 - `nowroom.user`: View and access the NowRoom application menu

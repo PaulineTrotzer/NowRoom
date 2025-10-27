@@ -168,7 +168,7 @@
                                                     "value": {
                                                         "code": null,
                                                         "comment": "",
-                                                        "message": "&lt;p&gt;&lt;span style=\"font-size: 36pt; font-family: tahoma, arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;Welcome to NowRoom Manger&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;"
+                                                        "message": "&lt;p&gt;&lt;span style=\"font-size: 36pt; font-family: tahoma, arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;Welcome to NowRoom Manager&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;"
                                                     }
                                                 }
                                             },
@@ -4486,7 +4486,7 @@
     "version": "3.0.0"
 }</layout>
         <macroponent_dependencies/>
-        <name>Home (Manger)</name>
+        <name>Home (Manager)</name>
         <output_prop_mapping/>
         <props>[
     {
@@ -4629,7 +4629,7 @@
   "message" : "&lt;p&gt;&lt;span style=\"font-size: 14pt; font-family: 'arial black', 'avant garde';\"&gt;Book rooms, manage reservations, and check open cases.&lt;/span&gt;&lt;/p&gt;",
   "comment" : ""
 }, {
-  "message" : "&lt;p&gt;&lt;span style=\"font-size: 36pt; font-family: tahoma, arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;Welcome to NowRoom Manger&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;",
+  "message" : "&lt;p&gt;&lt;span style=\"font-size: 36pt; font-family: tahoma, arial, helvetica, sans-serif;\"&gt;&lt;strong&gt;Welcome to NowRoom Manager&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;",
   "comment" : ""
 }, {
   "message" : "&lt;p&gt;Click to see your upcoming reservation.&lt;/p&gt;",
@@ -4727,14 +4727,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-19 14:32:45</sys_created_on>
         <sys_id>cbd0063b93ac729005087efdfaba10e7</sys_id>
-        <sys_mod_count>156</sys_mod_count>
-        <sys_name>Home (Manger)</sys_name>
+        <sys_mod_count>158</sys_mod_count>
+        <sys_name>Home (Manager)</sys_name>
         <sys_package display_value="NowRoom" source="x_1782765_nowroom">699b40c09340761005087efdfaba109b</sys_package>
         <sys_policy/>
         <sys_scope display_value="NowRoom">699b40c09340761005087efdfaba109b</sys_scope>
         <sys_update_name>sys_ux_macroponent_cbd0063b93ac729005087efdfaba10e7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-20 21:00:42</sys_updated_on>
+        <sys_updated_on>2025-10-27 08:17:35</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=cbd0063b93ac729005087efdfaba10e7"/>
 </record_update>
